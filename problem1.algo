@@ -1,0 +1,34 @@
+ALGORITHM problem1
+VAR
+    i,j:INTEGER
+    arr1 : ARRAY_OF INTEGER[];
+    arr2 : ARRAY_OF INTEGER[];
+    som2:INTEGER:=0
+    som1:INTEGER:=0
+    som3:INTEGER:=0
+    s:INTEGER
+BEGIN
+    FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+        write("donner un entier")
+        read(arr1[i])
+    END_FOR
+     FOR j FROM 0 TO arr2.length-1 STEP 1  DO
+        write("donner un entier")
+        read(arr2[j])
+    END_FOR
+      FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+        som1=som1+arr1[i]
+    END_FOR
+    FOR j FROM 0 TO arr2.length-1 STEP 1  DO
+        som2=som2+arr2[j]
+    END_FOR
+   FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+    FOR j FROM 0 TO arr2.length-1 STEP 1  DO
+        IF (arr1[i]=arr2[j]) THEN
+            som3=arr1[i]+arr2[j]+som3
+        END_IF
+    END_FOR
+   END_FOR
+   s=som1+som2-som3
+   write("la somme=",s)
+END
